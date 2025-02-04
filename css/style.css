@@ -134,3 +134,10 @@ object {
     opacity: 1;
 }
 
+.warning {
+    background-color: #FFEE8C;
+    border: 1px solid #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+}
