@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindly RSS Reader</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script>
+        function copyToClipboard() {
+            const commandText = document.getElementById("install-command").innerText;
+            navigator.clipboard.writeText(commandText).catch(err => {
+                console.error("Error copying text: ", err);
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="images/logo_big.png" height="250px" alt="Logo">
+        <p>Kindly RSS Reader is a self-hosted RSS aggregator designed for e-ink devices <br/>and optimized for running on low-end computers.</p>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#installation">Installation</a>
+            <a href="#screenshots">Screenshots</a>
+        </nav>
+        <a href="https://github.com/nicoan/kindly-rss-reader" target="_blank" class="button">
+            <img src="images/github-mark-white.png" alt="GitHub Logo">
+            View on GitHub
+        </a>
+    </header>
+
+    <section id="features">
+        <div class="section-content">
+            <h1>Features</h1>
+            <ul class="features-grid">
+                <li class="feature-item">
+                    <img src="images/features_rss.png" alt="RSS Icon">
+                    <p>Fetch and aggregate RSS feeds.</p>
+                </li>
+                <li class="feature-item">
+                    <img src="images/features_ebook.png" alt="E-Ink Icon">
+                    <p>Optimized for e-ink display readability.</p>
+                </li>
+                <li class="feature-item">
+                    <img src="images/features_server.png" alt="Server Icon">
+                    <p>Self-hostable on low-end hardware.</p>
+                </li>
+                <li class="feature-item">
+                    <img src="images/features_theme.png" alt="Theme Icon">
+                    <p>Dark / Light Theme</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="installation">
+        <div class="section-content">
+            <h1>Installation</h1>
+            <div>
+                <img src="images/docker_logo.png" alt="Docker Logo" style="width: 150px; margin-bottom: 10px;">
+                <p>Only Docker is available at the moment. Use the following command to run the image:</p>
+                <div class="copy-container">
+                    <pre id="install-command">curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/nicoan/kindly-rss-reader/refs/heads/main/install_docker.sh | sh</pre>
+                        <button class="copy-button" onclick="copyToClipboard()">
+                            <object>
+                                <embed src="images/copy_icon.svg" width="20px"></embed>
+                            </object>
+                        </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots">
+        <div class="section-content">
+            <h1>Screenshots</h1>
+            <h2>Light theme</h1>
+            <img src="images/1_light.jpeg" alt="Screenshot 1" height="350px">
+            <img src="images/2_light.jpeg" alt="Screenshot 2" height="350px">
+            <img src="images/3_light.jpeg" alt="Screenshot 3" height="350px">
+
+            <h2>Dark theme</h1>
+            <img src="images/1_dark.jpeg" alt="Screenshot 4" height="350px">
+            <img src="images/2_dark.jpeg" alt="Screenshot 5" height="350px">
+            <img src="images/3_dark.jpeg" alt="Screenshot 6" height="350px">
+        </div>
+    </section>
+
+    <footer>
+        <img src="images/logo_footer.png" alt="Logo footer" height="60px">
+        <p>Licensed under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a></p>
+        <p><a href="#features">Features</a> icons designed by <a href="https://freepik.com/" target="_blank">Freepik</a></p>
+    </footer>
+</body>
+</html>
+
