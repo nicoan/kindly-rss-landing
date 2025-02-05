@@ -27,6 +27,31 @@ nav a {
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    header #logo {
+        max-width: 60%;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    img {
+        max-width: 60%;
+        height: auto;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
 .button {
     display: inline-flex;
     align-items: center;
